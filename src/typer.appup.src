@@ -16,7 +16,7 @@
 %% limitations under the License.
 %%
 %% %CopyrightEnd%
-{"%VSN%",
+{"{{vsn}}",
  [{<<".*">>,[{restart_application, typer}]}],
  [{<<".*">>,[{restart_application, typer}]}]
 }.

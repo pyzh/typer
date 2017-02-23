@@ -1006,7 +1006,9 @@ msg(Msg) ->
 -spec version_message() -> no_return().
 
 version_message() ->
-  io:format("TypEr version "++?VSN++"\n"),
+  _ = application:load(typer),
+  {ok,Vsn} = application:get_key(typer,vsn),
+  io:format("TypEr version "++Vsn++"\n"),
   erlang:halt(0).
 
 -spec help_message() -> no_return().
