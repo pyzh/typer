@@ -24,7 +24,7 @@
 
 -module(typer).
 
--export([start/0]).
+-export([main/1]).
 
 %%-----------------------------------------------------------------------
 
@@ -71,10 +71,10 @@
 
 %%--------------------------------------------------------------------
 
--spec start() -> no_return().
+-spec main(list()) -> no_return().
 
-start() ->
-  {Args, Analysis} = process_cl_args(),
+main(ArgList) ->
+  {Args, Analysis} = process_cl_args(ArgList),
   %% io:format("Args: ~p\n", [Args]),
   %% io:format("Analysis: ~p\n", [Analysis]),
   Timer = dialyzer_timing:init(false),
@@ -571,10 +571,9 @@ get_type_info(Func, Types) ->
 %% Processing of command-line options and arguments.
 %%--------------------------------------------------------------------
 
--spec process_cl_args() -> {args(), analysis()}.
+-spec process_cl_args(list()) -> {args(), analysis()}.
 
-process_cl_args() ->
-  ArgList = init:get_plain_arguments(),
+process_cl_args(ArgList) ->
   %% io:format("Args is ~p\n", [ArgList]),
   {Args, Analysis} = analyze_args(ArgList, #args{}, #analysis{}),
   %% if the mode has not been set, set it to the default mode (show)
