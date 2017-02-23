@@ -105,7 +105,47 @@
 
 </section>
 
+<section><title>TypEr 0.9</title>
 
+  <section><title>Improvements and New Features</title>
+    <list>
+      <item>
+	<p>
+	  Major rewrite; all code has been cleaned up and placed in
+	  one file.  The only reason why this is not version 1.0 yet
+	  is that there is no proper documentation.</p>
+      </item>
+      <item>
+	<p>
+	  Added ability to receive the set of exported types and
+	  report unknown ones.</p>
+      </item>
+      <item>
+	<p>
+	  Added two undocumented options that may come very handy when
+	  trying to understand why typer reports some particular set
+	  of types for the functions in a module. These options are
+	  mainly for typer developers at this point, but may become
+	  documented in some future version.</p>
+      </item>
+    </list>
+  </section>
 
+  <section><title>Fixed Bugs and Malfunctions</title>
+    <list>
+      <item>
+	<p>
+	  Better handling of overloaded contracts; especially
+	  erroneous ones on which typer does not crash anymore.</p>
+      </item>
+      <item>
+        <p>
+	  Fixed problem that caused typer to hang when given a file
+	  whose module name did not correspond to the file name.</p>
+	</item>
+    </list>
+  </section>
+
+</section>
 </chapter>
 
