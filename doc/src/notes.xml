@@ -31,6 +31,24 @@
   </header>
   <p>This document describes the changes made to TypEr.</p>
 
+<section><title>TypEr 0.9.13</title>
+
+    <section><title>Improvements and New Features</title>
+      <list>
+        <item>
+          <p>
+	    Added COPYRIGHT.txt and updated copyright years</p>
+        </item>
+        <item>
+          <p>
+	    Added 'nowarn_export_all' option to avoid compile warnings
+	    for test suite with OTP-20.0 and later.</p>
+        </item>
+      </list>
+    </section>
+
+</section>
+
 <section><title>TypEr 0.9.12</title>
 
     <section><title>Improvements and New Features</title>
